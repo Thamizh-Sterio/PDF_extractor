@@ -1,0 +1,154 @@
+Tamilselv an Subr amani
+AI Specialist @ fischer
+4/73, K othambadi +91 8940903097 thamizhselv an.subr amani@gmail.com
+Profiles Tamilselv an Subr amani
+Thamizhselv an
+tamilselv an
+Summar y As an AI Specialist with o ver 6+ y ears of experience, I ex cel in de veloping, deplo ying, and optimizing
+sophisticated machine learning models, including adv anced clustering and state-of-the-ar t document
+summarization t ools. My exper tise in cloud integr ation spans A zure ser vices, while my pr oficiency in Dock er
+and A zure De vOps ensur es the cr eation of r obust deplo yment pipelines. Skilled in Lar ge Language Models
+(LLM), I le verage LangChain, Qdr ant, D VC, and MLflow for str eamlined model management and v ersion
+contr ol. Additionally , my experience with neur al networks and web fr ameworks lik e Chainlit, Str eamlit, Gr adio,
+and Langfuse allows me t o craft inter activ e AI applications that consistently surpass pr oject goals.De veloper ,
+or Engineer in an inno vative product de velopment envir onment.
+Committed t o pursuing dr eams, I firmly belie ve that if an idea persists in y our mind, it is wor th taking the risk
+to achie ve it.
+Education Birla Institute of Technology and Science, Pilani
+Softwar e Systems
+8.562020-06-01 - 2022-06-01
+M.Tech ( WILP)
+https:/ /bits-pilani-wilp.ac.in
+Earned a specialisation in Data Analytics, learned how t o apply principles behind modern Data Analytics
+techniques; apply statistical and machine learning methods t o real data; e valuate their per formance and
+e ﬀectiv ely communicate the r esults; and build exper tise in adv anced Ar tificial Intelligence t opics such as
+Deep Learning and Natur al Language Pr ocessing.
+University College of Engineering- Thirukkuv alai- Nagapattinam.
+Computer Science and Engineering
+First Class2014-06-01 - 2018-04-01
+B.E
+https:/ /aucetk.edu.in/
+Gained theor etical and pr actical K nowledge on computer pr ogramming, algorithm design and analysis,
+computer networks, database management, computer ar chitectur e, and softwar e engineering. Also
+emphasiz ed the de velopment of analytical, pr oblem-solving, and critical thinking skills.
+Projects Github
+Gitrepo-
+https:/ /github.com/Thamizhor tan
+StackOv er Flow
+Stacko verflow Pr ofile-
+https:/ /stacko verflow.com/users/10159144/tamil-selv an-s
+Publications Artificial Intelligence P ower ed Banking Chatbot 2018-03-05
+https:/ /www .semanticscholar .org/paper/Ar tificial-Intelligence-P ower ed-Banking-Chatbot-K umar-
+Tamilselv an/14e9e8a7e98d1d40003bb8f69158ff87b2086478?p2df
+Certifications Neur al Networks and Deep Learning
+DeepLearning.AI2021-06-01
+Programming in C++
+NIIT2016-03-01
+Sun cer tified Ja va De veloper (SCJD)
+Oracle2017-04-01
+Introduction t o AI
+University of Helsinki2020-12-01
+Deep Learning with P ython
+Udemy2019-01-01
+Introduction To Python Pr ogramming
+Udemy2019-06-01
+Python Intern
+Uniq Technologies2018-02-01
+Languages English
+08
+Tamil
+08
+
+Experience Fischer
+AI SpecialistJan 2024 -
+Bangalor e
+https:/ /www .fischer-international.com/en
+AI Specialist – Fischer
+Fixbot Pr oject:
+Developed a pr oduct and dealer r ecommendation chatbot using GPT -4 (A zure OpenAI) and
+LangChain.
+Extracted data fr om PIM APIs and mark eting catalogs using A zure Document Intelligence.
+Utiliz ed Qdr ant (v ector database) for similarity sear ch and A zure Cosmos DB for conv ersation
+storage.
+Deplo yed with Dock er, Chainlit, and Langfuse for per formance f eedback.
+Clustering Model for Steel Anchors:
+Designed clustering models with LSTM aut oencoders t o classify failur e types.
+Built tr aining pipelines with MLflow for r eproducibility and D VC for aut omated data pipelines.
+Deplo yed as an A zure web app, with metrics visualiz ed via dashboar ds and Str eamlit for user
+feedback.
+Won 2nd place in the global Fischer FPS A wards out of 300 pr ojects.
+Document Summariz er Tool:
+Developed a secur e document summariz er suppor ting W ord and PDF files with GPT -4.
+Used Gr adio for fr ontend, F astAPI for back end, and A zure Blob St orage for data handling.
+Integr ated AAD for authentication and t oken-based access.
+Knock Detection Model:
+Created a r eal-time knock detection model for the Fischer DI Y app, detecting 5 material types.
+Preprocessed data with noise augmentation and f eatur e extr action using Y AMNE T.
+Deplo yed as a REST  API integr ated int o mobile apps on Pla y Store and App St ore.
+Technologies:  Python, F astAPI, Str eamlit, Chainlit, Gr adio, A zure SQL/Cosmos DB, Dock er, LangChain,
+Langfuse, Transformers, MLflow , Qdr ant, D VC, Azure Web Apps, Entr aID authentication.
+Hella
+Machine Learning Specialist2019-08-21 - 2023-12-22
+Chennai
+https:/ /www .hella.com/hella-in/index.html
+Machine Learning Specialist – Hella
+MLOps and Cloud Deplo yments:
+Resear ched and implemented ML Ops fr ameworks for data science pr ojects, deplo ying ML applications in
+the cloud using CI/CD pipelines.
+Digital Twin De velopment:
+Developed a Digital Twin for component simulation using a multi-input, multi-output neur al network
+model based on the Na vier-St okes Heat Transf er equation.
+Real-Time DL Applications:
+Built a deep learning application t o compute PWM r ates in r eal time using temper ature, curr ent, and PWM
+rate inputs.
+Deplo yed the solution on the cloud with a mix ed-input, mix ed-output neur al network using TensorFlow
+and K eras.
+Plastic Fiber Orientation Analysis:
+Created an ML application t o analyz e fiber orientation in plastic materials for injection molding
+simulations.
+Utiliz ed clustering methods for fiber alignment and deplo yed the solution on A zure.
+Simulation E cosystem for Engineers:
+Built an ML-driv en ecosystem t o provide simulation engineers with insights and r ecommendations on
+component pr oper ties, impr oving simulation efficiency and understanding.
+LED Optimization Tool:
+Designed a compr ehensiv e LED calculat or for pr e-development, selecting optimal LEDs based on PCB
+material, driv ers, and efficiency .
+Applied ML techniques t o optimiz e heatsink, PCB, and LED designs, analyzing heat tr ansf er coefficients
+and thermal v ariations.
+Technical Skills:  Python, LangChain, GenAI (LLM), NLP , NLTK, C++, Ja va, TensorFlow , SQL, Git, GCP , Azure,
+AWS, K ubernetes, Bash, Dock er, CI/CD .
+Logituit
+Softwar e Engineer2018-08-10 - 2019-08-09
+Coimbat ore
+https:/ /logituit.com/
+Softwar e Engineer – Logituit
+Security and Sur veillance Applications:
+Developed AI solutions for face, people, object, and v ehicle analysis in security and sur veillance systems
+using computer vision and deep learning techniques.
+Specializ ed in applying CNNs and RNNs for r eal-time analysis and detection tasks.
+Deep Learning and ML Implementation:
+Built and deplo yed Deep Neur al Networks (CNNs, RNNs) with TensorFlow and K eras.
+Applied ML algorithms (SVMs, Random F orests, Decision Trees) for v arious classification and r egression
+tasks using Scikit-learn.
+Web Scr aping and Chatbot De velopment:
+Automated dataset cr eation thr ough web scr aping and de veloped chatbots using NLP techniques such
+as topic modeling, NL U, and LD A with libr aries lik e Gensim and SpaCy .
+Business Pr oblem Solutions:
+Addr essed business challenges b y designing and implementing optimiz ed ML/DL models tailor ed for
+specific r equir ements.
+Technical Skills:  Python, C++, Ja va, TensorFlow , Keras, NLP (NL TK, SpaCy , Gensim), Topic Modeling (LD A),
+SQL, Git, Machine Learning, Deep Learning.
+Skills Python
+c++
+GenAI
+Large Language models, Langchain, Qdr ant, Pr ompt engineering, langfuse
+VBA
+Deep Learning (CNN, NN, RNN, LSTM, ANN)
+NLP ( Topic Modeling, NL TK, Chatbot)
+Frameworks ( Tensor flow , K eras, NLP ,spaCy , Gensim ,SQL, OP enCV )
+Machine ( Decision tr ees, KNN, KMeans, SVM, Linear and Logistic Regr ession,Random F orest, PCA, etc., )
+Cloud ( GCP , Kubernetes, A WS, A zure, GI T, Bash, CI/CD , Dock er)
+Simulation Domain K nowledge ( CFD , FEA )
+Simulation Softwar e ( Ansys Spaceclaim, W orkbench , CFX_Pr e, CFX_P ost, Altair Hyper view)
+GenAI
+Featur e Engineering

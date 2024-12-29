@@ -1,0 +1,11 @@
+pyPDF2
+sentence-transformers
+qdrant-client
+numpy
+langchain-community
+langchain
+openai
+tiktoken
+streamlit
+torch
+
