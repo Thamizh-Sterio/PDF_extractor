@@ -6,6 +6,7 @@ from qdrant_client.models import PointStruct, VectorParams
 from sentence_transformers import SentenceTransformer
 import torch
 import streamlit as st
+from qdrant_client.http import models as rest
 
 # Function to extract text from a PDF file
 def extract_text_from_pdf(file_path):
@@ -62,13 +63,19 @@ def embed_text(text):
     return embeddings
 
 
-# Function to store embeddings in Qdrant
 def store_embeddings_in_qdrant(embeddings, metadata, collection_name="text_embeddings"):
-    client = QdrantClient(host="localhost", port=6333)
+    client = QdrantClient(
+        url="https://999afacb-c6f6-442a-b989-8d604bca202d.europe-west3-0.gcp.cloud.qdrant.io",
+        api_key="SygXkpNjfr8dKA0c3XIyjaI8rw8N2nbx7qCev07wc7D7lnIE5BvOhQ"
+    )
     vector_dim = len(embeddings[0])  # Dimension of the embeddings
 
-    # Check and create the Qdrant collection if it doesn't exist
-    if not client.collection_exists(collection_name):
+    # Create the collection if it doesn't exist
+    try:
+        client.get_collection(collection_name)
+        print(f"Collection '{collection_name}' already exists.")
+    except Exception as e:
+        print(f"Collection '{collection_name}' does not exist. Creating it.")
         client.create_collection(
             collection_name=collection_name,
             vectors_config=VectorParams(size=vector_dim, distance="Cosine"),
@@ -84,14 +91,18 @@ def store_embeddings_in_qdrant(embeddings, metadata, collection_name="text_embed
         for i, embedding in enumerate(embeddings)
     ]
 
+    # Upsert points into the collection
     client.upsert(collection_name=collection_name, points=points)
     print(f"Stored {len(points)} embeddings into Qdrant collection '{collection_name}'.")
+
+
 
 
 def truncate_input(input_text, max_length=1024):
     tokenizer = AutoTokenizer.from_pretrained("gpt2")
     tokenized_input = tokenizer(input_text, truncation=True, max_length=max_length, return_tensors="pt")
     return tokenizer.decode(tokenized_input["input_ids"][0], skip_special_tokens=True)
+
 
 
 # Function to create the chat interface using GPT-2
@@ -105,7 +116,10 @@ def create_chat_interface():
         device=0 if torch.cuda.is_available() else -1,
     )
 
-    client = QdrantClient(host="localhost", port=6333)
+    client = QdrantClient(
+        url="https://999afacb-c6f6-442a-b989-8d604bca202d.europe-west3-0.gcp.cloud.qdrant.io",
+        api_key="SygXkpNjfr8dKA0c3XIyjaI8rw8N2nbx7qCev07wc7D7lnIE5BvOhQ"
+    )
     collection_name = "text_embeddings"
 
     def chat(input_message):
@@ -126,7 +140,6 @@ def create_chat_interface():
         return response[0]["generated_text"]
 
     return chat
-
 
 # Streamlit Interface
 def main():
