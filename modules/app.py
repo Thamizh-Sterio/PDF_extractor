@@ -8,6 +8,12 @@ import torch
 import streamlit as st
 from qdrant_client.http import models as rest
 
+# -------------------------------------
+# Developer: Tamilselvan
+# Application: AI-Powered PDF Chatbot
+# Copyright © 2024 Tamilselvan. All rights reserved.
+# -------------------------------------
+
 # Function to extract text from a PDF file
 def extract_text_from_pdf(file_path):
     """
@@ -96,13 +102,10 @@ def store_embeddings_in_qdrant(embeddings, metadata, collection_name="text_embed
     print(f"Stored {len(points)} embeddings into Qdrant collection '{collection_name}'.")
 
 
-
-
 def truncate_input(input_text, max_length=1024):
     tokenizer = AutoTokenizer.from_pretrained("gpt2")
     tokenized_input = tokenizer(input_text, truncation=True, max_length=max_length, return_tensors="pt")
     return tokenizer.decode(tokenized_input["input_ids"][0], skip_special_tokens=True)
-
 
 
 # Function to create the chat interface using GPT-2
@@ -141,34 +144,51 @@ def create_chat_interface():
 
     return chat
 
+
 # Streamlit Interface
 def main():
-    st.title("Chat with Your PDF")
+    st.set_page_config(page_title="AI-Powered PDF Chat", layout="wide")
+    st.title("📖 AI-Powered PDF Chatbot")
+    st.markdown(
+        """
+        ### Welcome!  
+        This app allows you to interact with your PDF documents using AI.  
+        - **Step 1:** Upload a PDF document.  
+        - **Step 2:** Extract, summarize, and index its content.  
+        - **Step 3:** Start chatting with your PDF!  
+        ---
+        """
+    )
     uploaded_file = st.file_uploader("Upload a PDF", type="pdf")
 
     if uploaded_file is not None:
-        # Save the uploaded file locally
-        temp_pdf_path = "temp_uploaded.pdf"
-        with open(temp_pdf_path, "wb") as temp_file:
-            temp_file.write(uploaded_file.read())
+        with st.spinner("Processing PDF..."):
+            # Save the uploaded file locally
+            temp_pdf_path = "temp_uploaded.pdf"
+            with open(temp_pdf_path, "wb") as temp_file:
+                temp_file.write(uploaded_file.read())
 
-        st.write("Processing PDF...")
-        extracted_text = extract_text_from_pdf(temp_pdf_path)
+            extracted_text = extract_text_from_pdf(temp_pdf_path)
+            st.success("PDF text extracted!")
 
-        st.write("Summarizing content...")
-        summarized_text = summarize_text(extracted_text, max_new_tokens=50, min_length=25)
-        embeddings = embed_text(summarized_text)
+            st.write("**Summarizing content...**")
+            summarized_text = summarize_text(extracted_text, max_new_tokens=50, min_length=25)
+            embeddings = embed_text(summarized_text)
 
-        metadata = {"source": temp_pdf_path, "summary": summarized_text}
-        store_embeddings_in_qdrant(embeddings, metadata, collection_name="text_embeddings")
+            metadata = {"source": temp_pdf_path, "summary": summarized_text}
+            store_embeddings_in_qdrant(embeddings, metadata, collection_name="text_embeddings")
+            st.success("PDF content indexed! Start chatting below.")
 
-        st.success("PDF content indexed. Start chatting!")
-        chat_interface = create_chat_interface()
+            chat_interface = create_chat_interface()
 
-        user_input = st.text_input("Ask a question:")
-        if user_input:
-            response = chat_interface(user_input)
-            st.write("Response from AI:", response)
+            user_input = st.text_input("Ask a question to your PDF:")
+            if user_input:
+                with st.spinner("Generating response..."):
+                    response = chat_interface(user_input)
+                st.write("**AI Response:**", response)
+
+    st.markdown("---")
+    st.markdown("© 2024 Tamilselvan. All rights reserved.")
 
 
 if __name__ == "__main__":
